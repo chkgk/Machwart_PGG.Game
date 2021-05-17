@@ -1,0 +1,70 @@
+{{ block title }}Ihre Entscheidung{{ endblock }}
+{{ block content }}
+
+<table width="80%" bgcolor="GhostWhite">
+    <tr>
+ <td colspan="5"> <center> <h2 class="display-20">Merkmale Ihrer Gruppenmitglieder </h2> </center> </td>
+ </tr>
+    <tr><td colspan="4"><hr/></td></tr>
+ <tr>
+ <th> Merkmal </th>
+ <th> Mitglied 1 </th>
+ <th> Mitglied 2 </th>
+ </tr>
+    <tr><td colspan="4"><hr/></td></tr>
+ <tr>
+ <td> Alter:</td>
+ <td> {{ participant.vars.age0 }} Jahre </td>
+ <td> {{ participant.vars.age1 }} Jahre </td>
+ </tr>
+    <tr><td colspan="4"><hr/></td></tr>
+ <tr>
+ <td> Selbst/beide Elternteile mit <Br>
+     deutscher Staatsangehöhrigkeit geboren: </td>
+ <td> {{ participant.vars.origin0 }} </td>
+ <td> {{ participant.vars.origin1 }} </td>
+ </tr>
+    <tr><td colspan="4"><hr/></td></tr>
+ <tr>
+ <td> Studentenstatus: </td>
+ <td> {{ participant.vars.student0 }} </td>
+ <td> {{ participant.vars.student1 }} </td>
+ </tr>
+    <tr><td colspan="4"><hr/></td></tr>
+ <tr>
+ <td> Familienstand: </td>
+ <td> {{ participant.vars.family0 }} </td>
+ <td> {{ participant.vars.family1 }} </td>
+ </tr>
+</table>
+<p></p>
+
+<style>
+    .otree-timer {
+        display: none;
+    }
+</style>
+
+<script>
+    $(function () {
+        $('.otree-timer__time-left').on('update.countdown', function (event) {
+            if (event.offset.totalSeconds === 60) {
+                $('.otree-timer').show();
+            }
+        });
+    });
+</script>
+
+
+
+
+    {{ formfields }}
+
+    {{ next_button }}
+<br> <span style="color:white"> .</span>
+<p></p> <span style="color:white"> . </span>
+
+
+    {{ include Constants.instructions_template }}
+
+{{ endblock }}

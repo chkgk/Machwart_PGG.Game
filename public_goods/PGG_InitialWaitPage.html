@@ -1,0 +1,31 @@
+{{ extends 'otree/WaitPage.html' }}
+{{ load otree }}
+
+{{ block styles }}
+<link href="{% static 'global/css/global.css' %}" rel="stylesheet">
+{{ endblock }}
+
+
+{{ block scripts }}
+<script>
+function myFunction() {
+  //setInterval(function(){ document.forms[0].submit(); }, 3000);
+}
+</script>
+{{ endblock }}
+
+
+{{ block content }}
+<body onload="myFunction()">
+<img src="{% static 'global/images/cool-background.svg' %}" id="bg" alt=""/>
+
+
+<p class="lead">
+    Für den zweiten Teil des Experiments werden Sie nun mit {{ Constants.num_others_per_group }} weiteren Teilnehmern verbunden, um eine Gruppe zu bilden.
+    Bitte haben Sie etwas Geduld.
+</p>
+
+
+</body>
+
+{{ endblock }}

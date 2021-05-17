@@ -1,0 +1,43 @@
+{{ block title }}Ergbenis{{ endblock }}
+{{ block content }}
+
+
+    <table class="table-condensed" style="width:500px; margin-top:20px;">
+        <tr><td>Ihr Beitrag zum Projekt:</td><td>{{ player.contribution }}</td></tr>
+
+        <tr><td colspan="2"><hr/></td></tr>
+
+        <tr><td>Durchschnittlicher Beitrag Ihrer <br>Gruppenmitglieder zum Projekt:</td><td>{{ average_contribution }}</td></tr>
+
+        <tr><td colspan="2"><hr/></td></tr>
+
+        <tr><td>Gesamteinnahmen vom Projekt</td><td>{{ total_earnings }}</td></tr>
+        <tr><td>Ihre Einnahmen vom Projekt:</td><td>{{ group.individual_share }}</td></tr>
+
+        <tr><td colspan="2"><hr/></td></tr>
+
+        <tr><td>Ihr Gesamtertrag in dieser Runde:</td><td>{{ player.payoff }}</td></tr>
+
+    </table>
+    <p></p>
+
+<style>
+    .otree-timer {
+        display: none;
+    }
+</style>
+
+<script>
+    $(function () {
+        $('.otree-timer__time-left').on('update.countdown', function (event) {
+            if (event.offset.totalSeconds === 60) {
+                $('.otree-timer').show();
+            }
+        });
+    });
+</script>
+
+    {{ next_button }}
+
+
+{{ endblock }}

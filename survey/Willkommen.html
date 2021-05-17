@@ -1,0 +1,84 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block styles %}
+    <link href="{% static 'global/css/global.css' %}" rel="stylesheet">
+{% endblock %}
+
+
+{% block content %}
+<body onload="">
+<img src="{% static 'global/images/cool-background.svg' %}" id="bg" alt=""/>
+
+
+    <div class="card mt-5">
+        <div class="card-body">
+            <h1 class="display-4">Willkommen!</h1>
+            <p class="lead">Vielen Dank für Ihre Bereitschaft an der Studie teilzunehmen.</p>
+
+            <table class="table mt-5 mb-5 table-responsive">
+                <tbody>
+                    <tr>
+                        <th scope="row">Name der Studie</th>
+                        <td>Public Good Game</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Dauer der Studie</th>
+                        <td>ungefähr 40 Minuten</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Bezahlung</th>
+                        <td>
+                            {{ session.config.participation_fee }} sowie einen Verdienst, dessen Betrag sowohl von Ihren
+                            Entscheidungen, als auch von den Entscheidungen anderer Teilnehmer_innen abhängt.
+                        </td>
+                    </tr>
+                    <tr>
+                        <tr>
+                        <th scope="row">Technische Vorraussetzungen</th>
+                        <td>
+                            Die Studie funktioniert sowohl auf Smartphones und Tablets als auch auf Laptops und PCs. Außerdem
+                            funktioniert sie in allen modernen Browsern. Für einen möglichst reibungslosen Ablauf raten wir
+                            dazu, einen Laptop oder PC mit stabiler Internetverbindung zu benutzen.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Einwilligung</th>
+                        <td>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                                <label class="form-check-label" for="exampleCheck1">
+                                    Ich stimme der anonymisierten Analyse meiner Antworten zum Zwecke der
+                                    wissenschaftlichen Auswertung zu und möchte an der Studie teilnehmen.
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <tr>
+                        <th scope="row">Verantwortlicher der Studie</th>
+                        <td>
+                            <address>
+                    André Machwart <br>
+                    Julius-Maximilians-Universität <br>
+                    Sanderring 2<br>
+                    97070 Würzbrug<br>
+                    <a href="mailto:andre.machwart@uni-wuerzburg.de?subject=PGG Studie">andre.machwart@uni-wuerzburg.de</a><br>
+                </address>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <div class="d-flex justify-content-center mb-5">
+                <button class="btn btn-primary" type="submit" id="submitButton" style="border-radius: 40px;">
+                    Studie beginnen
+                </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+{% endblock %}
