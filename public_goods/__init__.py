@@ -40,12 +40,11 @@ class Subsession(BaseSubsession):
         if len(waiting_players) >= Constants.players_per_group:
             return waiting_players[:Constants.players_per_group]
 
-        # we only get here, if not enough players are waiting
-        # every 30 seconds (approx.) the wait page reloads. These reloads trigger this method.
+
         for p in waiting_players:
             if p.matching_takes_too_long():
                 p.participant.vars['dropout'] = True
-                return [p]  # make sure your app can handle a group with size 1
+                return [p]
 
 
 class Group(BaseGroup):
