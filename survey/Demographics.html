@@ -5,8 +5,43 @@
         Sie sind nun am ersten Teil des Experiments angelangt. Bitte beantworten Sie die folgenden Fragen:
     </p>
 
-    {{ formfields }}
+    {{ formfield 'age' label='<b>Bitte geben Sie an, welcher Altersgruppe Sie angehören.</b>'}}
 
+  <tr><td colspan="2"><hr/>
+
+    {{ formfield 'student' label='<b>Studieren Sie derzeit an einer Universität bzw. Hochschule?</b>'}}
+
+  <tr><td colspan="2"><hr/>
+
+    {{ formfield 'origin' label='<b>Sind Sie und beide Elternteile mit deutscher Staatsangehörigkeit geboren?</b>'}}
+
+  <tr><td colspan="2"><hr/>
+
+    {{ formfield 'family' label='<b>Bitte geben Sie Ihren Familienstand an?</b>'}}
+
+  <tr><td colspan="2"><hr/>
+
+    {{ formfield 'gender' label="<b>Bitte geben Sie Ihr Geschlecht an.</b>" }}
+
+  <tr><td colspan="2"><hr/>
+
+    {{ formfield 'ethnic' label='<b>Bitte geben Sie Ihre ethnische Herkunft an.</b>'}}
+
+  <tr><td colspan="2"><hr/>
+
+   {{ formfield 'trust' label='<b>Würden Sie ganz allgemein sagen, dass man den meisten Menschen vertrauen kann, <br> oder dass man im Umgang mit Menschen nicht vorsichtig genug sein kann?</b>'}}
+  <tr><td colspan="2"><hr/>
+
+    {{ formfield 'moral' label='<b>Wie beurteilen Sie folgendes Handeln: "Steuern hinterziehen, wenn man die Möglichkeit dazu hat."</b><p> <br> Bitte nutzen Sie folgende Skala: <br>1 = Unter keinen Umständen in Ordnung; 10 = In jedem Fall in Ordnung'}}
+  <tr><td colspan="2"><hr/>
+
+    {{ formfield 'altruism' label='<b>Bitte geben Sie an, ob die nachfolgende Beschreibung auf Ihre Person zutrifft:<br> "Es ist wichtig etwas gutes für die Gesellschaft zu tun."</b>'}}
+  <tr><td colspan="2"><hr/>
+
+    {{ formfield 'Religion' label='<b>Wie wichtig ist Gott in Ihrem Leben?</b> <p> <br> Bitte nutzen Sie folgende Skala: <br>1 = Überhaupt nicht wichtig; 10 = Sehr wichtig'}}
+  <tr><td colspan="2"><hr/>
+
+{{ formfield 'Experience' label='<b>Haben Sie schon einmal an mindestens einem wissenschaftlichen Experiment teilgenommen?</b>'}}
     {{ next_button }}
 
 {{ endblock }}
