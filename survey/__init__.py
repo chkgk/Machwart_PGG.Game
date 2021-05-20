@@ -2,8 +2,6 @@ import time
 
 from otree.api import *
 
-import survey
-
 c = Currency  # old name for currency; you can delete this.
 
 
@@ -27,24 +25,75 @@ class Group(BaseGroup):
 class Player(BasePlayer):
     age = models.StringField(
         choices=['unter 17', '18-20', '21-30', '31-40', '41-50', '51-60', 'älter als 60'],
-        label='Bitte geben Sie an, welcher Altersgruppe Sie angehöre.',
-
     )
 
     student = models.StringField(
         choices=[['Ja', 'Ja'], ['Nein', 'Nein']],
-        label='Studieren Sie derzeit an einer Universität bzw. Hochschule?',
-        widget=widgets.RadioSelect,
+        widget=widgets.RadioSelectHorizontal,
     )
 
     origin = models.StringField(
         choices=[['Ja', 'Ja'], ['Nein', 'Nein']],
-        label='Sind Sie und beide Elternteile mit deutscher Staatsangehörigkeit geboren?',
-        widget=widgets.RadioSelect,
+        widget=widgets.RadioSelectHorizontal,
     )
     family = models.StringField(
         choices=['Ledig', 'Verheiratet', 'Geschieden', 'Verwitwet'],
-        label='Bitte geben Sie Ihren Familienstand an.',
+    )
+    gender = models.StringField(
+        choices=['weiblich', 'männlich', 'divers'],
+        widget=widgets.RadioSelectHorizontal,
+    )
+    ethnic = models.StringField(
+        choices=['Nordeuropa', "Westeuropa", "Mitteleuropa", "Osteuropa", "Südeuropa", "Afrika", "Asien", "Nordamerika",
+                 "Südamerika", "Australien"],
+    )
+    trust = models.StringField(
+        choices=['Man kann den meisten Menschen vertrauen', 'Man kann nicht vorsichtig genug sein'],
+        widget=widgets.RadioSelectHorizontal,
+    )
+    moral = models.StringField(
+        choices=[
+            [1, "1"],
+            [2, "2"],
+            [3, "3"],
+            [4, "4"],
+            [5, "5"],
+            [6, "6"],
+            [7, "7"],
+            [8, "8"],
+            [9, "9"],
+            [10, "10"],
+        ],
+        widget=widgets.RadioSelectHorizontal,
+    )
+    altruism = models.StringField(
+        choices=[
+            [1, "Trifft sehr zu"],
+            [2, "Trifft zu"],
+            [3, "Trifft teilweise zu"],
+            [4, "trifft ein wenig zu"],
+            [5, "Trifft eher nicht zu"],
+            [6, "Trifft nicht zu"],
+        ],
+        widget=widgets.RadioSelectHorizontal,
+    )
+    Religion = models.StringField(
+        choices=[
+            [1, "1"],
+            [2, "2"],
+            [3, "3"],
+            [4, "4"],
+            [5, "5"],
+            [6, "6"],
+            [7, "7"],
+            [8, "8"],
+            [9, "9"],
+            [10, "10"]],
+        widget=widgets.RadioSelectHorizontal,
+    )
+    Experience = models.StringField(
+        choices=[['Ja', 'Ja'], ['Nein', 'Nein']],
+        widget=widgets.RadioSelectHorizontal,
     )
 
     CQ1 = models.IntegerField(blank=True)
@@ -67,7 +116,8 @@ class Allgemeines(Page):
 
 class Demographics(Page):
     form_model = 'player'
-    form_fields = ['age', 'student', 'origin', 'family']
+    form_fields = ['age', 'student', 'origin', 'family', 'gender', 'ethnic', 'trust', 'moral', 'altruism', 'Religion',
+                   'Experience']
 
     def before_next_page(player: Player, **kwargs):
         player.participant.vars['age'] = player.age
