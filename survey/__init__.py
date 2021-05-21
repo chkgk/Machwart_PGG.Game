@@ -12,6 +12,7 @@ class Constants(BaseConstants):
     multiplier = 1.2
     num_others_per_group = 0
     players_per_group = None
+    instructions_template = 'public_goods/instructions.html'
 
 
 class Subsession(BaseSubsession):
@@ -136,18 +137,18 @@ class Anleitung(Page):
 # Error_Messages
 def CQ1_error_message(self, value):
     if value != Constants.Endowment:
-        return 'Rechnung: (20 Punkte – 0 Punkte) + (0.4 * 0 Punkte)'
+        return 'Leider Falsch. Bitte beachten Sie die Rahmenbedingungen am unteren Ende Ihres Bildschirms.'
 
 
 def CQ2_error_message(self, value):
     if value != Constants.Endowment * Constants.multiplier:
-        return 'Rechnung: (20 Punkte – 20 Punkte) + (0.4 * 60 Punkte)'
+        return 'Leider Falsch. Bitte beachten Sie die Rahmenbedingungen am unteren Ende Ihres Bildschirms.'
 
 
 def CQ3_error_message(self, value):
     if value != Constants.Endowment + (
             2 * Constants.Endowment * Constants.multiplier) / 3:
-        return 'Rechnung: (20 Punkte – 0) + (0.4 * 40 Punkte)'
+        return 'Leider Falsch. Bitte beachten Sie die Rahmenbedingungen am unteren Ende Ihres Bildschirms.'
 
 
 class Fragen(Page):
