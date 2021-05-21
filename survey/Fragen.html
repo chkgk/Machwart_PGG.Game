@@ -23,7 +23,7 @@
                                         <strong>Angenommen niemand aus Ihrer Gruppe trägt etwas zum öffentliche Projekt bei
                                             (auch Sie nicht)...</strong>
                                     </p>
-                                    {% formfield player.CQ1 label="<small>Wie hoch ist Ihr Ertrag in dieser Runde?</small>"  %}
+                                    {% formfield player.CQ1 label="<small>Wie hoch ist Ihr Gesamtertrag in Runde?</small>"  %}
                                 </div>
                             </div>
                         </div>
@@ -39,7 +39,7 @@
                                         <strong>Angenommen alle aus Ihrer Gruppe
                                         tragen die gesamten {{ Constants.Endowment }} Punkte zum öffentliche Projekt bei (auch Sie)...</strong>
                                     </p>
-                                    {% formfield player.CQ2 label="<small>Wie hoch ist Ihr Ertrag in dieser Runde?</small>" %}
+                                    {% formfield player.CQ2 label="<small>Wie hoch ist Ihr Gesamtertrag in dieser Runde?</small>" %}
 
                                 </div>
                             </div>
@@ -58,7 +58,7 @@
                                             die gesamten {{ Constants.Endowment }} Punkte...
                                         </strong>
                                     </p>
-                                    {% formfield player.CQ3 label="<small>Wie hoch ist Ihr Ertrag in dieser Runde?</small>"  %}
+                                    {% formfield player.CQ3 label="<small>Wie hoch ist Ihr Gesamtertrag in dieser Runde?</small>"  %}
 
                                 </div>
                             </div>
@@ -71,6 +71,9 @@
                             <center> {% next_button %}</center>
                         </div>
 
+                    <div class="row mt-4">
+                         {{ include Constants.instructions_template }}
+                    </div>
                     </div>
                 </div>
             </div>
