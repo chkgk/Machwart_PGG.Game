@@ -24,7 +24,7 @@ class Group(BaseGroup):
 
 class Player(BasePlayer):
     age = models.StringField(
-        choices=['unter 17', '18-20', '21-30', '31-40', '41-50', '51-60', 'älter als 60'],
+        choices=['18-30', '31-40', '41-50', '51-60', 'älter als 60'],
     )
 
     student = models.StringField(
@@ -40,7 +40,7 @@ class Player(BasePlayer):
         choices=['Ledig', 'Verheiratet', 'Geschieden', 'Verwitwet'],
     )
     gender = models.StringField(
-        choices=['weiblich', 'männlich', 'divers'],
+        choices=['weiblich', 'männlich'],
         widget=widgets.RadioSelectHorizontal,
     )
     ethnic = models.StringField(
@@ -68,12 +68,12 @@ class Player(BasePlayer):
     )
     altruism = models.StringField(
         choices=[
-            [1, "Trifft sehr zu"],
-            [2, "Trifft zu"],
-            [3, "Trifft teilweise zu"],
-            [4, "trifft ein wenig zu"],
-            [5, "Trifft eher nicht zu"],
-            [6, "Trifft nicht zu"],
+            [1, "Vollkommen ähnlich"],
+            [2, "Sehr ähnlich"],
+            [3, "Ziemlich ähnlich"],
+            [4, "Etwas ähnlich"],
+            [5, "Kaum ähnlich"],
+            [6, "Gar nicht ähnlich"],
         ],
         widget=widgets.RadioSelectHorizontal,
     )
