@@ -73,4 +73,5 @@ class PaymentInfo(Page):
             final_payoff=(player.payment_round_payoff + 12).to_real_world_currency(player.session),
         )
 
+
 page_sequence = [PaymentInfo]

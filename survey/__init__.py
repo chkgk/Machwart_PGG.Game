@@ -2,6 +2,7 @@ import time
 
 from otree.api import *
 
+
 class Constants(BaseConstants):
     name_in_url = 'survey'
     num_rounds = 1
@@ -10,6 +11,7 @@ class Constants(BaseConstants):
     num_others_per_group = 0
     players_per_group = None
     instructions_template = 'public_goods/instructions.html'
+
 
 class Subsession(BaseSubsession):
     pass
@@ -99,8 +101,6 @@ class Player(BasePlayer):
 
     CQ3 = models.IntegerField(blank=True)
 
-
-# FUNCTIONS
 
 # PAGES
 class Willkommen(Page):

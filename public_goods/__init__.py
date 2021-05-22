@@ -1,14 +1,7 @@
 from otree.api import *
 
-#
-# import settings
-# from payment_info import Player
-
 import time
-import math
 import random
-
-c = Currency  # old name for currency; you can delete this.
 
 doc = """
 This is a one-period public goods game with 3 players.
@@ -118,6 +111,7 @@ class PGG_InitialWaitPage(WaitPage):
     @staticmethod
     def is_displayed(player):
         return player.round_number == 1
+
 
 class Contribute(Page):
     """Player: Choose how much to contribute"""
