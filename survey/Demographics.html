@@ -2,10 +2,62 @@
 {{ block content }}
 
     <p>
-        Sie sind nun am ersten Teil des Experiments angelangt. Bitte beantworten Sie die folgenden Fragen:
+        Sie sind nun am ersten Teil des Experiments angelangt. Bitte beantworten Sie die folgenden Fragen.
     </p>
+    
+    {{ formfield 'age' label='<b>Bitte geben Sie an, welcher Altersgruppe Sie angehören.</b>'}}
 
-    {{ formfields }}
+    <hr/>
+
+    {{ formfield 'gender' label="<b>Bitte geben Sie Ihr Geschlecht an.</b>" }}
+
+    <hr/>
+
+    {{ formfield 'student' label='<b>Studieren Sie derzeit an einer Universität bzw. Hochschule?</b>'}}
+
+
+    <hr/>
+
+    {{ formfield 'family' label='<b>Bitte geben Sie Ihren Familienstand an.</b>'}}
+
+    <hr/>
+
+    {{ formfield 'origin' label='<b>Sind Sie und Ihre beiden Elternteile mit deutscher Staatsangehörigkeit
+    geboren?</b>'}}
+
+
+    <hr/>
+
+    {{ formfield 'ethnic' label='<b>Bitte geben Sie Ihre ethnische Herkunft an.</b>'}}
+
+    <hr/>
+
+    {{ formfield 'trust' label='<b>Würden Sie ganz allgemein sagen, dass man den meisten Menschen vertrauen kann,
+    oder dass man im Umgang mit Menschen nicht vorsichtig genug sein kann?</b>'}}
+
+    <hr/>
+
+    {{ formfield 'moral' label='<b>Können Sie bitte für den folgenden Punkt angeben, ob Sie dies unter keinen
+    Umständen in Ordnung finden, in jedem Fall in Ordnung finden oder irgendetwas dazwischen: <br> <br> "Steuern
+    hinterziehen, wenn man die Möglichkeit hat"</b>
+    <p><br> Bitte nutzen Sie folgende Skala: <br>1 = Unter keinen Umständen in Ordnung; 10 = In jedem Fall in
+        Ordnung'}}
+
+    <hr/>
+
+    {{ formfield 'altruism' label='<b>Es folgt die Beschreibung einer fiktive Personen. Bitte geben Sie anhand
+    dieser Eigenschaft an, ob die jeweilige Person Ihnen vollkommen ähnlich, sehr ähnlich, ziemlich ähnlich, etwas
+    ähnlich, kaum ähnlich oder gar nicht ähnlich ist:<br> <br>"Es ist ihr (ihm) wichtig, etwas Gutes für die
+    Gesellschaft zu tun."</b><br>'}}
+
+    <hr/>
+
+    {{ formfield 'Religion' label='<b>Wie wichtig ist Gott in Ihrem Leben?</b>
+    <p><br> Bitte nutzen Sie folgende Skala: <br>1 = Überhaupt nicht wichtig; 10 = Sehr wichtig'}}
+
+    <hr/>
+
+    {{ formfield 'Experience' label='<b>Haben Sie schon einmal ökonomischen Experiment teilgenommen?</b>'}}
 
     <div class="text-center">{{ next_button }}</div>
 

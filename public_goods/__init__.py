@@ -25,8 +25,8 @@ class Constants(BaseConstants):
     endowment = cu(20)
     multiplier = 1.2
     # """drop out settings""" #
-    max_group_match_waiting = 20  # seconds
-    page_timeout = 30  # seconds
+    max_group_match_waiting = 600  # seconds
+    page_timeout = 120  # seconds
 
 
 class Subsession(BaseSubsession):
@@ -158,7 +158,6 @@ class ResultsWaitPage(WaitPage):
 class Results(Page):
     """Players payoff: How much each has earned"""
 
-    # timeout_seconds = 10
 
     @staticmethod
     def vars_for_template(player: Player):

@@ -56,11 +56,16 @@
                             die gesamten {{ Constants.Endowment }} Punkte...
                         </b>
                     </p>
-                    {% formfield player.CQ3 label="<small>Wie hoch ist Ihr Ertrag in dieser Runde?</small>" %}
+                    {% formfield player.CQ3 label="<small>Wie hoch ist Ihr Gesamtertrag in dieser Runde?</small>"  %}
+                    
                 </div>
             </div>
         </div>
         <div class="text-center"><p>{% next_button %}</p></div>
+        
+        <div class="row mt-4">
+             {{ include Constants.instructions_template }}
+        </div>
     </div>
 
 {{ endblock }}
