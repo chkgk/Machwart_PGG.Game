@@ -1,25 +1,39 @@
 {{ block title }}Anleitung{{ endblock }}
 {{ block content }}
 
+{{ block styles }}
+    <style>
+        td, th {
+            vertical-align: middle;
+        }
+        table {
+            border: 1px;
+            width: 60%;
+            background-color: GhostWhite;
+        }
+    </style>
+{{ endblock }}
+
 <div class="card bg-light m-3">
     <div class="card-body">
 
         <button type="button" class="btn btn-dark">Aufbau des Experiments</button>
-        </p>
         <p>
             Das Experiment besteht aus zwei Teilen:<br/>
-              Teil 1): Wir bitten wir Sie darum einen kurzen Fragebogen auszufüllenen.<br/>
-              Teil 2): Beginn des eigendlichen Experiments: <br/>
-        <p></p>
-        Sie werden mit zwei weiteren Teilnehmer_innen in eine Gruppe eingeteilt, deren Besetzung über das Experiment hinweg
-        unverändert bleibt. Das Experiment beinhaltet 10 voneinander unabhängige
-        Entscheidungsrunden. Weil die Studie anonym ist, kennen Sie Ihre Gruppenmitglieder nicht und Ihre
-        Gruppenmitglieder kennen Sie nicht.
+            Teil 1): Wir bitten wir Sie darum einen kurzen Fragebogen auszufüllenen.<br/>
+            Teil 2): Beginn des eigendlichen Experiments: <br/>
+        </p>
+        <p>
+            Sie werden mit zwei weiteren Teilnehmer_innen in eine Gruppe eingeteilt, deren Besetzung über das Experiment hinweg
+            unverändert bleibt. Das Experiment beinhaltet 10 voneinander unabhängige
+            Entscheidungsrunden. Weil die Studie anonym ist, kennen Sie Ihre Gruppenmitglieder nicht und Ihre
+            Gruppenmitglieder kennen Sie nicht.
         </p>
         <p>
             <button type="button" class="btn btn-dark">Startguthaben</button>
         </p>
-        <p> Zu Beginn jeder Entscheidungsrunde erhalten Sie und Ihre Gruppenmitglieder jeweils ein Startguthaben<br/> in
+        <p> 
+            Zu Beginn jeder Entscheidungsrunde erhalten Sie und Ihre Gruppenmitglieder jeweils ein Startguthaben<br/> in
             Höhe von 20 Punkten. Punkte sind nicht in nachfolgende Runden übertragbar.
         </p>
         <p>
@@ -29,84 +43,89 @@
             Ziel ist es, jede Runde einen möglichst hohen Ertrag zu erzielen. Dafür werden Sie in jeder Runde darum gebeten,
             Ihr Guthaben entweder auf ein privates Konto oder auf ein öffentliches Projekt zu verteilen:</p>
         <p>
-            <u>Privates Konto </u> <br/>Jeder eingezahlte Punkt erhöht Ihren Ertrag in dieser Runde um einen Punkt.
+            <u>Privates Konto</u> <br/>
+            Jeder eingezahlte Punkt erhöht Ihren Ertrag in dieser Runde um einen Punkt.
             Niemand außer Ihnen profitiert von Ihren auf das private Konto eingezahlten Punkten.
         </p>
         <p>
-            <u> Öffentliches Projekt </u> <br/> Die Punkte, die Sie zu dem Gruppenprojekt beitragen, werden mit den
+            <u>Öffentliches Projekt </u><br/> 
+            Die Punkte, die Sie zu dem Gruppenprojekt beitragen, werden mit den
             Beiträgen Ihrer Gruppenmitglieder zusammengerechnet. Anschließend wird diese Summe mit einem Faktor von 1,2
             multipliziert (also eine Rendite von 20 %) und gleichmäßig auf alle Gruppenmitglieder aufgeteilt.
             Folglich profitieren alle Gruppenmitglieder gleichermaßen von den Beiträgen und der
             Rendite. Dementsprechend ermittelt sich Ihr Ertrag aus dem öffentlichen Projekt am Ende einer Runde folgendermaßen:
         </p>
 
-        <center> (Gesamtbeitrag zum Projekt * 1,2) / 3 Teilnehmer_innen =<br>
-            <p></p>Gesamtbeitrag zum Projekt * 0,4 </center>
-        <p>
+        <p class="text-center"> 
+            (Gesamtbeitrag zum Projekt * 1,2) / 3 Teilnehmer_innen =<br>
+            Gesamtbeitrag zum Projekt * 0,4
+        </p>
 
         </p>
         <p>
             <button type="button" class="btn btn-dark">Ertrag</button>
         </p>
-        <p>Ihr Ertrag am Ende einer Entscheidungsrunde ist der den Sie in Ihr privates Konto einzahlen zuzüglich der
-            Einnahamen aus dem öffentlichen Projekt:<br/>
-            <p>
+        <p>
+            Ihr Ertrag am Ende einer Entscheidungsrunde ist der den Sie in Ihr privates Konto einzahlen zuzüglich der
+            Einnahamen aus dem öffentlichen Projekt:
         </p>
-          <center>  (20 Punkte – Ihr Beitrag zum Projekt) + (0.4 * Gesamtbeitrag zum Projekt).</center>
+        <p class="text-center">
+          (20 Punkte – Ihr Beitrag zum Projekt) + (0.4 * Gesamtbeitrag zum Projekt).
         </p>
         <p>
-            <em> <u> Beispiel zur Berechnung des gesamten Ertrags einer Runde </u> <p></p>
+            <em><u>Beispiel zur Berechnung des gesamten Ertrags einer Runde</u>
+        </p>
         <ul>
            <li> Von Ihrem Guthaben in Höhe von 20 Punkten tragen Sie 10 Punkte zum öffentlichen Projekt
                 bei, d. h. die übrigen 10 Punkte zahlen Sie in Ihr privates Konto ein</li>
-               <li> Ihre Gruppenmitglieder tragen insgesamt 20 Punkte zum öffentlichen Projekt bei</li></ul>
-        <p></p>
-    <center>
-
-        <table border="1" width="60%" bgcolor="GhostWhite">
+            <li> Ihre Gruppenmitglieder tragen insgesamt 20 Punkte zum öffentlichen Projekt bei</li>
+        </ul>
+        <table style="margin-left: auto; margin-right: auto;">
             <tbody>
             <tr>
-                <th VALIGN="MIDDLE"> Konto</th>
-                <th VALIGN="MIDDLE">Rechnung</th>
-                <th VALIGN="MIDDLE">Ergebnis</th>
+                <th>Konto</th>
+                <th>Rechnung</th>
+                <th>Ergebnis</th>
             </tr>
             <tr><td colspan="3"><hr/></td></tr>
             <tr>
-                <td VALIGN="MIDDLE">Ertrag privates Konto</td>
-                <td VALIGN="MIDDLE">10 Punkte * 1</td>
-                <td VALIGN="MIDDLE">10 Punkte</td>
+                <td>Ertrag privates Konto</td>
+                <td>10 Punkte * 1</td>
+                <td>10 Punkte</td>
             </tr>
-            <tr class=border_bottom="1">
-                <td VALIGN="MIDDLE">Ertrag öffentiches Projekt</td>
-                <td VALIGN="MIDDLE">(10 Punkte + 20 Punkte) * 0,4</td>
-                <td VALIGN="MIDDLE">12 Punkte</td>
+            <tr style="border-bottom: 1px">
+                <td>Ertrag öffentiches Projekt</td>
+                <td>(10 Punkte + 20 Punkte) * 0,4</td>
+                <td>12 Punkte</td>
             </tr>
             <tr><td colspan="3"><hr/></td></tr>
             <tr>
-                <td VALIGN="MIDDLE">Gesamtertrag</td>
+                <td>Gesamtertrag</td>
                 <td></td>
-                <td VALIGN="MIDDLE">22 Punkte</td>
+                <td>22 Punkte</td>
             </tr>
             </tbody>
         </table>
-    </center>
-        <p></p>
+
         <ul>
-        <p><li> Die übrigen Gruppenmitglieder erhalten ebenso einen Ertrag in Höhe von 12 Punkten aus dem öffentlichen Projekt.</li>  </p> </em></ul>
+            <li> Die übrigen Gruppenmitglieder erhalten ebenso einen Ertrag in Höhe von 12 Punkten aus dem öffentlichen Projekt.</li>  
+        </ul>
+        </em>
         <p>
             <button type="button" class="btn btn-dark">Informationen</button>
         </p>
         <p>
             In jeder Runde erhalten Sie folgene Informationen:
-            <p></p><ul>
-        <li> Demographische Informationen zu Ihrer Gruppenmitgliedern</li>
-        <li> Den durchschnittlichen Beitrag zum öffentlichen Projekt Ihrer Gruppenmitglieder</li>
-        <li> Die Gesamteinnahmen aus dem Projekt</li>
-        <li> Ihre Einnahmen aus dem Projekt</li>
-        <li> Ihren Gesamtertrag der jeweiligen Runde</li> </ul>
-        <p></p>
+        </p>
+        <ul>
+            <li> Demographische Informationen zu Ihrer Gruppenmitgliedern</li>
+            <li> Den durchschnittlichen Beitrag zum öffentlichen Projekt Ihrer Gruppenmitglieder</li>
+            <li> Die Gesamteinnahmen aus dem Projekt</li>
+            <li> Ihre Einnahmen aus dem Projekt</li>
+            <li> Ihren Gesamtertrag der jeweiligen Runde</li> 
+        </ul>
+        <p>
         Ihre Gruppenmitglieder erhalten exakt die gleichen Informationen wie Sie. Selbstverstänldich ist Ihre Anoymität und die Anoymität Ihrer Gruppenmitglieder jederzeit garantiert.
-
         </p>
         <p>
             <button type="button" class="btn btn-dark">Entlohnung</button>
@@ -116,29 +135,33 @@
             Aus den 10 Runden des Spiels wird der Computer <b>eine zufällige Runde</b> auswählen und Ihren erzielten Punkte in dieser Runde in Euro umrechnen. Der Wechselkur beträgt 30 Cent je Punkt.
             Sollte eines Ihrer Gruppenmitglieder wegen Inaktivität aus der Studie ausgeschlossen werden, erhalten Sie die Pünktlichkeitsprämie. In einer abschließenden Übersicht
             werden Sie über die ausgewöhlte Runde, Ihre erzeilten Punkte in der ausgewählten Runde und Ihre Entlohnung in Euro infomiert.
-            Ihren Verdienst bekommen Sie bis spätestens 31. Juli 2021 auf Ihr Konto überwiesen.</p>
-         <p></p>
+            Ihren Verdienst bekommen Sie bis spätestens 31. Juli 2021 auf Ihr Konto überwiesen.
+        </p>
+        <p>
         <b> Ihr Chance auf einen hohen Verienst ist umso höher, je öfter Sie einen hohen Gesamtertrag in einer Runde erzielen!
             Treffen Sie Ihre Entscheidungen deshalb sorgfälltig und bedacht! </b>
-       <p></p>
+       </p>
         <p>
             <button type="button" class="btn btn-dark">Inaktivität</button>
         </p>
         <p>
             Sobald Sie Bestanteil einer Gruppe sind, haben Sie auf jeder Seite 2 Minuten Zeit, um eine Entscheidung zu treffen bzw. die Infromationen zu verarbeiten.
-        Ihre verbliebene Zeit wird Ihnen per Timer angezeigt, wenn sie weniger als eine Minute beträgt.</p>
-        <p></p>
+        Ihre verbliebene Zeit wird Ihnen per Timer angezeigt, wenn sie weniger als eine Minute beträgt.
+        </p>
+        <p>
         Notwenidig ist diese zeitliche Befristung, um zu lange Wartezeiten für Sie und Ihre Gruppenmitglieder zu vermeiden.
         Sollten Sie aufgrund der Inaktivität von der Studie disqualifiziert werden, können wir Ihnen kein Geld auszahlen.
-        <p></p>
+        </p>
+        <p>
             <button type="button" class="btn btn-dark">Anleitung</button>
-        <p></p>
+        </p>
         <p>
             Die für sinnvolle Entscheidungen wichtigsten Informationen dieser Anleitung stehen Ihnen auch während der Durchführung des Experiments zur Verfügung.
             Sie werden am unteren Ende Ihres Bildschirms angezeigt. </p>
-         <p></p>
+        </p>
+    </div>
+</div>
 
-
-<center> {{ next_button }}</center>
+<div class="text-center"> {{ next_button }}</div>
 
 {{ endblock }}

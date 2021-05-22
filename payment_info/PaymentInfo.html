@@ -1,60 +1,59 @@
 {% block content %}
-<body onload="">
 <img src="{% static 'global/images/cool-background.svg' %}" id="bg" alt=""/>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-sm-12 col-md-10 col-lg-8">
             <div class="card mt-5">
                 {{ if participant.vars.dropout }}
-                <div class="card-body">
-                    <h1 class="display-4 mb-5">Vielen Dank für Ihre Teilnahme.</h1>
-                    <p class="lead">
-                        Sofern Sie augeschieden sind, weil wir keine weiteren Gruppenmitglieder für Sie finden konnten
-                        werden wir dies den Daten entnehmen können und werden Ihnen für Ihre Geduld
-                        <strong> {{ Constants.participation_fee }} Euro </strong>
-                        auszahlen. Die Entlohnung erfolgt nach Beendigung der Studie zeitnah per SEPA-Überweisung
-                    </p>
-                    <p class="lead">
-                        Sind Sie aufgrund eines selbstverschudeten Timeouts ausgeschieden, können wir Ihnen leider
-                        keinen Betrag auszahlen.
-                    </p>
-                </div>
+                    <div class="card-body">
+                        <h1 class="display-4 mb-5">Vielen Dank für Ihre Teilnahme.</h1>
+                        <p class="lead">
+                            Sofern Sie augeschieden sind, weil wir keine weiteren Gruppenmitglieder für Sie finden konnten
+                            werden wir dies den Daten entnehmen können und werden Ihnen für Ihre Geduld
+                            <b> {{ Constants.participation_fee }} Euro </b>
+                            auszahlen. Die Entlohnung erfolgt nach Beendigung der Studie zeitnah per SEPA-Überweisung
+                        </p>
+                        <p class="lead">
+                            Sind Sie aufgrund eines selbstverschudeten Timeouts ausgeschieden, können wir Ihnen leider
+                            keinen Betrag auszahlen.
+                        </p>
+                    </div>
                 {{ else }}
                     {{ if participant.vars.dropout_in_group }}
-                    <div class="card-body">
-                        <h1 class="display-4 mb-5">Vielen Dank für Ihre Teilnahme.</h1>
-                        <p class="lead">
-                            Leider wurde eines Ihrer Gruppenmitglieder während der Studie disiqualifiziert.
-                        </p>
-                        <p class="lead">
-                            Für Ihre Bereitschaft an der Studie teilzunehmen, die korrekte Beantwortung der
-                            Verständnisfragen und Ihre Geduld bekommen Sie <strong> {{ Constants.participation_fee }} Euro </strong>
-                            ausgezahlt. Die Entlohnung erfolgt nach Beendigung der Studie zeitnah per SEPA-Überweisung.
-                        </p>
-                 {{ else }}
-                    <div class="card-body">
-                        <h1 class="display-4 mb-5">Vielen Dank für Ihre Teilnahme.</h1>
-                        <p class="lead">
-                            Die Studie ist jetzt beendet.
-                            Sie bekommen <strong></strong>{{ final_payoff }}<sup>*</sup> ausgezahlt.
-                            Die Entlohnung erfolgt nach Beendigung der Studie zeitnah per SEPA-Überweisung.
-                        </p>
-
-                        <tr><td colspan="2"><hr/></td></tr>
-
-                        <p>In der vom Computer zufällig ausgewählten Runde #{{ participant.vars.payment_round }}
-                            haben Sie  {{ participant.vars.payment_round_payoff }} erzielt. Inklusive Ihrer
-                            Pünktlichkeitsprämie i. H. v. 3 Euro beträgt Ihr
-                            Verdienst somit {{ final_payoff }}.</p>
-
+                        <div class="card-body">
+                            <h1 class="display-4 mb-5">Vielen Dank für Ihre Teilnahme.</h1>
+                            <p class="lead">
+                                Leider wurde eines Ihrer Gruppenmitglieder während der Studie disiqualifiziert.
+                            </p>
+                            <p class="lead">
+                                Für Ihre Bereitschaft an der Studie teilzunehmen, die korrekte Beantwortung der
+                                Verständnisfragen und Ihre Geduld bekommen Sie <b> {{ Constants.participation_fee }} Euro </b>
+                                ausgezahlt. Die Entlohnung erfolgt nach Beendigung der Studie zeitnah per SEPA-Überweisung.
+                            </p>
+                        </div>
+                    {{ else }}
+                        <div class="card-body">
+                            <h1 class="display-4 mb-5">Vielen Dank für Ihre Teilnahme.</h1>
+                            <p class="lead">
+                                Die Studie ist jetzt beendet.
+                                Sie bekommen <strong></strong>{{ final_payoff }}<sup>*</sup> ausgezahlt.
+                                Die Entlohnung erfolgt nach Beendigung der Studie zeitnah per SEPA-Überweisung.
+                            </p>
+    
+                            <hr/>
+    
+                            <p>
+                                In der vom Computer zufällig ausgewählten Runde #{{ participant.vars.payment_round }}
+                                haben Sie  {{ participant.vars.payment_round_payoff }} erzielt. Inklusive Ihrer
+                                Pünktlichkeitsprämie i. H. v. 3 Euro beträgt Ihr
+                                Verdienst somit {{ final_payoff }}.
+                            </p>
+                        </div>
                     {{ endif }}
-                    </div>
                 {{ endif }}
             </div>
         </div>
     </div>
 </div>
-
-</body>
 
 {{ endblock }}

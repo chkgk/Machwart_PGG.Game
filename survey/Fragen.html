@@ -3,79 +3,64 @@
 {{ block content }}
 
 
-                <div class="card-body">
-                    <p>
-                        Für sinnvolle Entscheidungen ist es wichtig, dass alle Teilnehmer die Spielregeln verstanden haben. <br>
-                        Bitte beantworten Sie deshalb die nachfolgenden Fragen. Bitte runden Sie kaufmännisch auf ganze Zahlen.
-                    </p>
-
-
-                    <div class="row mt-4">
-                        <div class="col">
-                            <div class="card bg-white">
-                                <div class="card-body">
-                                    <h5>
-                                            <button type="button" class="btn btn-dark">Frage #1</button>
-                                    </h5>
-                                    <p>
-                                        Zu Beginn einer jeden Runde bekommen alle Gruppenmitglieder ein Guthaben in Höhe
-                                        von {{ Constants.Endowment }} Punkten.
-                                        <strong>Angenommen niemand aus Ihrer Gruppe trägt etwas zum öffentliche Projekt bei
-                                            (auch Sie nicht)...</strong>
-                                    </p>
-                                    {% formfield player.CQ1 label="<small>Wie hoch ist Ihr Ertrag in dieser Runde?</small>"  %}
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card bg-white">
-                                <div class="card-body">
-                                    <h5>
-                                            <button type="button" class="btn btn-dark">Frage #2</button>
-                                    </h5>
-                                    <p>
-                                        Zu Beginn einer jeden Runde bekommen alle Gruppenmitglieder ein Guthaben in Höhe
-                                        von {{ Constants.Endowment }} Punkten.
-                                        <strong>Angenommen alle aus Ihrer Gruppe
-                                        tragen die gesamten {{ Constants.Endowment }} Punkte zum öffentliche Projekt bei (auch Sie)...</strong>
-                                    </p>
-                                    {% formfield player.CQ2 label="<small>Wie hoch ist Ihr Ertrag in dieser Runde?</small>" %}
-
-                                </div>
-                            </div>
-                        </div>
+    <div class="card-body">
+        <p>
+            Für sinnvolle Entscheidungen ist es wichtig, dass alle Teilnehmer die Spielregeln verstanden haben. <br>
+            Bitte beantworten Sie deshalb die nachfolgenden Fragen. Bitte runden Sie kaufmännisch auf ganze Zahlen.
+        </p>
+        
+        <div class="row mt-4">
+            <div class="col">
+                <div class="card bg-white">
+                    <div class="card-body">
+                        <h5>
+                            <button type="button" class="btn btn-dark">Frage #1</button>
+                        </h5>
+                        <p>
+                            Zu Beginn einer jeden Runde bekommen alle Gruppenmitglieder ein Guthaben in Höhe
+                            von {{ Constants.Endowment }} Punkten.
+                            <b>Angenommen niemand aus Ihrer Gruppe trägt etwas zum öffentliche Projekt bei
+                                (auch Sie nicht)...</b>
+                        </p>
+                        {% formfield player.CQ1 label="<small>Wie hoch ist Ihr Ertrag in dieser Runde?</small>"  %}
                     </div>
-                    <div class="col">
-                            <div class="card bg-white">
-                                <div class="card-body">
-                                    <h5>
-                                            <button type="button" class="btn btn-dark">Frage #3</button>
-                                    </h5>
-                                    <p>
-                                        Zu Beginn einer jeden Runde bekommen alle Gruppenmitglieder ein Guthaben in Höhe
-                                        von {{ Constants.Endowment }} Punkten.
-                                        <strong>Angenommen Sie tragen nichts zum öffentlichen Projekt bei, Ihre Gruppenmitglieder jedoch
-                                            die gesamten {{ Constants.Endowment }} Punkte...
-                                        </strong>
-                                    </p>
-                                    {% formfield player.CQ3 label="<small>Wie hoch ist Ihr Ertrag in dieser Runde?</small>"  %}
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!---->
-
-
-                        <div>
-                            <center> {% next_button %}</center>
-                        </div>
-
+                </div>
+            </div>
+            <div class="col">
+                <div class="card bg-white">
+                    <div class="card-body">
+                        <h5>
+                            <button type="button" class="btn btn-dark">Frage #2</button>
+                        </h5>
+                        <p>
+                            Zu Beginn einer jeden Runde bekommen alle Gruppenmitglieder ein Guthaben in Höhe
+                            von {{ Constants.Endowment }} Punkten.
+                            <b>Angenommen alle aus Ihrer Gruppe
+                            tragen die gesamten {{ Constants.Endowment }} Punkte zum öffentliche Projekt bei (auch Sie)...</b>
+                        </p>
+                        {% formfield player.CQ2 label="<small>Wie hoch ist Ihr Ertrag in dieser Runde?</small>" %}
                     </div>
                 </div>
             </div>
         </div>
+        <div class="col">
+            <div class="card bg-white">
+                <div class="card-body">
+                    <h5>
+                        <button type="button" class="btn btn-dark">Frage #3</button>
+                    </h5>
+                    <p>
+                        Zu Beginn einer jeden Runde bekommen alle Gruppenmitglieder ein Guthaben in Höhe
+                        von {{ Constants.Endowment }} Punkten.
+                        <b>Angenommen Sie tragen nichts zum öffentlichen Projekt bei, Ihre Gruppenmitglieder jedoch
+                            die gesamten {{ Constants.Endowment }} Punkte...
+                        </b>
+                    </p>
+                    {% formfield player.CQ3 label="<small>Wie hoch ist Ihr Ertrag in dieser Runde?</small>" %}
+                </div>
+            </div>
+        </div>
+        <div class="text-center"><p>{% next_button %}</p></div>
     </div>
-
 
 {{ endblock }}

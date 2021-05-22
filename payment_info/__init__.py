@@ -1,10 +1,5 @@
 from otree.api import *
 
-import settings
-
-c = Currency  # old name for currency; you can delete this.
-
-
 doc = """
 This application provides a webpage instructing participants how to get paid.
 Examples are given for the lab and Amazon Mechanical Turk (AMT).

@@ -119,11 +119,6 @@ class PGG_InitialWaitPage(WaitPage):
     def is_displayed(player):
         return player.round_number == 1
 
-
-class Introduction(Page):
-    pass
-
-
 class Contribute(Page):
     """Player: Choose how much to contribute"""
 

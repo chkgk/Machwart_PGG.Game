@@ -2,10 +2,6 @@ import time
 
 from otree.api import *
 
-import survey
-
-c = Currency  # old name for currency; you can delete this.
-
 
 class Constants(BaseConstants):
     name_in_url = 'survey'
